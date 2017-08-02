@@ -2,6 +2,11 @@
 # random int generator
 from random import randint
 
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
 
 def dice_input():
     """Get the number of dice."""
