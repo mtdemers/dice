@@ -56,16 +56,14 @@ def reroll():
     again = raw_input('Would you like to reroll, make a change, or end r/c/e? ')
     if again == 'r':
         roll_dice()
+    elif again == 'e':
+        print "Ok, thanks!"
+        return
+    elif again == 'c':
+        change()
     else:
-        if again == 'e':
-            print "Ok, thanks!"
-            return
-        else:
-            if again == 'c':
-                change()
-            else:
-                print "Please respond with r, c, or e"
-                reroll()
+        print "Please respond with r, c, or e"
+        reroll()
     reroll()
 
 
