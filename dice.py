@@ -55,7 +55,7 @@ def reroll():
             if again == 'c':
                 change()
             else:
-                print "Please respond with y or n"
+                print "Please respond with r, c, or e"
                 reroll()
     reroll()
 
