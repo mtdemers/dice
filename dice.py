@@ -1,8 +1,9 @@
-# Dice roller
+"""Dice roller for any number of dice and sides"""
 # random int generator
 from random import randint
 
 def main():
+    """main function"""
     pass
 
 if __name__ == "__main__":
