@@ -61,7 +61,7 @@ def reroll(dice, sides):
     """Ask user for reroll"""
     again = raw_input('Would you like to reroll, make a change, or end r/c/e? ')
     if again == 'r':
-        roll_dice()
+        roll_dice(dice, sides)
     elif again == 'e':
         print "Ok, thanks!"
         return
@@ -69,8 +69,8 @@ def reroll(dice, sides):
         change(dice, sides)
     else:
         print "Please respond with r, c, or e"
-        reroll()
-    reroll()
+        reroll(dice, sides)
+    reroll(dice, sides)
 
 
 def change(dice, sides):
@@ -78,17 +78,17 @@ def change(dice, sides):
     which = raw_input('Change dice or sides d/s? ')
     if which == 'd':
         dice_input()
-        roll_dice()
+        roll_dice(dice, sides)
     else:
         if which == 's':
             sides_input()
-            roll_dice()
+            roll_dice(dice, sides)
         else:
             print 'Please input only d or s'
-            change()
+            change(dice, sides)
 
 
-dice_input()
-sides_input()
-roll_dice(dice, sides)
-reroll(dice, sides)
+dice_num = dice_input()
+sides_num = sides_input()
+roll_dice(dice_num, sides_num)
+reroll(dice_num, sides_num)
