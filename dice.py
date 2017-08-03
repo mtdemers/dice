@@ -5,7 +5,7 @@ from random import randint
 
 def main():
     """main function"""
-    pass
+
 
 if __name__ == "__main__":
     main()
@@ -77,18 +77,17 @@ def change(dice, sides):
     """Change number of dice or sides"""
     which = raw_input('Change dice or sides d/s? ')
     if which == 'd':
-        dice_input()
-        roll_dice(dice, sides)
+        dice_new = dice_input()
+        roll_dice(dice_new, sides)
     else:
         if which == 's':
-            sides_input()
-            roll_dice(dice, sides)
+            sides_new = sides_input()
+            roll_dice(dice, sides_new)
         else:
             print 'Please input only d or s'
             change(dice, sides)
 
-
-dice_num = dice_input()
-sides_num = sides_input()
-roll_dice(dice_num, sides_num)
-reroll(dice_num, sides_num)
+dice = dice_input()
+sides = sides_input()
+roll_dice(dice, sides)
+reroll(dice, sides)
