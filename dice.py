@@ -69,21 +69,21 @@ def sides_check():
             sides_int = True
 
 
-""" def reroll():
-    """Ask user for reroll"""
-    again = raw_input('Would you like to roll, make a change, or end r/c/e? ')
-    if again == 'r':
-        roll_dice()
-    elif again == 'e':
-        print "Ok, thanks!"
-        return
-    elif again == 'c':
-        change()
-    else:
-        print "Please respond with r, c, or e"
-        reroll()
-    reroll()
-"""
+# def reroll():
+#    """Ask user for reroll"""
+#    again = raw_input('Would you like to roll, make a change, or end r/c/e? ')
+#    if again == 'r':
+#        roll_dice()
+#    elif again == 'e':
+#        print "Ok, thanks!"
+#        return
+#    elif again == 'c':
+#        change()
+#    else:
+#        print "Please respond with r, c, or e"
+#        reroll()
+#    reroll()
+
 
 def change():
     """Change number of dice or sides"""
