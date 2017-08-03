@@ -13,7 +13,15 @@ def dice_input():
     global dice
     # input for dice number variable
     dice = int(raw_input('How many dice would you like to roll? '))
-    dice_check()
+    # Validate for positive integers
+    dice_int = False
+    while not dice_int:
+        if dice <= 0:
+            print "Error! Please enter a positive number of dice."
+            dice_input()
+        else:
+            dice_int = True
+            print "Ok, I will roll %s dice." % (dice)
     return
 
 
@@ -21,7 +29,14 @@ def sides_input():
     """Get the number of sides"""
     global sides
     sides = int(raw_input('How many sides does each dice have? '))
-    sides_check()
+    # Validate for positive integers
+    sides_int = False
+    while not sides_int:
+        if sides <= 0:
+            print "Error! Please enter a positive number of sides."
+            sides_input()
+        else:
+            sides_int = True
     return
 
 
@@ -46,29 +61,6 @@ def roll_dice():
         roll_dice()
 
 
-def dice_check():
-    """Check for positive integers"""
-    dice_int = False
-    while not dice_int:
-        if dice <= 0:
-            print "Error! Please enter a positive number of dice."
-            dice_input()
-        else:
-            dice_int = True
-            print "Ok, I will roll %s dice." % (dice)
-
-
-def sides_check():
-    """Check for positive integers"""
-    sides_int = False
-    while not sides_int:
-        if sides <= 0:
-            print "Error! Please enter a positive number of sides."
-            sides_input()
-        else:
-            sides_int = True
-
-
 def change():
     """Change number of dice or sides"""
     which = raw_input('Change dice or sides d/s? ')
@@ -87,4 +79,3 @@ def change():
 dice_input()
 sides_input()
 roll_dice()
-# reroll()
